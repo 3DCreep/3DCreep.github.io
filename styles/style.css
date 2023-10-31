@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Handjet:wght@100;200;300;500;600&display=swap");
+[data-theme=light] {
+  --text: #060604;
+  --background: #f8f7f2;
+  --primary: #56995b;
+  --secondary: #dbebe0;
+  --accent: #315511;
+}
+
+[data-theme=dark] {
+  --text: #fbfbf9;
+  --background: #0d0c07;
+  --primary: #66a96a;
+  --secondary: #142419;
+  --accent: #caeeaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/*# sourceMappingURL=style.css.map */
