@@ -7,35 +7,151 @@
     <title>Document</title>
   </head>
   <body>
+    <button id="theme_btn">
+      <img src="../source_cont/Th-Light.svg" alt="" />
+      <img src="../source_cont/Th-Dark.svg" alt="" />
+      <div class="themebtn_ind">
+    </button>
     <header>
       <div class="head_logo">
         <span>ALEXOS</span>
         <img src="../source_cont/Placeholder.png" alt="" />
       </div>
       <nav>
-        <a href="">Главная</a>
-        <a href="">Навыки</a>
-        <a href="">Портфолио</a>
-        <a href="">Обо мне</a>
-        <a href="">Отзывы </a>
+        <a href="#main_sec">Главная</a>
+        <a href="#skills_sec">Навыки</a>
+        <a href="#portfolio_sec">Портфолио</a>
+        <a href="#about_me_sec">Обо мне</a>
+        <a href="#reviews_sec">Отзывы </a>
         <a href="">Контакты</a>
       </nav>
     </header>
-    <section id="main_sec">
-      <div class="main_sec_cont">
-        <h1>Александр</h1>
-        <p>
-          Я — Frontend-разработчик и дизайнер с огромной мотивацией. Занимаюсь
-          программированием более 2 лет.
-        </p>
-        <a href="" class="btn">Скачать резюме</a>
-      </div>
-      <img src="../source_cont/Placeholder.png" alt="" />
-    </section>
-    <h1>THIS IS</h1>
-    <p>THE BEST WEBSITE</p>
 
-    <button class="btn" id="theme_btn">CLICK ON MEEEEE</button>
+    <main>
+      <section id="main_sec">
+        <div class="main_sec_cont">
+          <h1>Александр</h1>
+          <p>
+            Я — Frontend-разработчик и дизайнер с огромной мотивацией. Занимаюсь
+            программированием более 2 лет.
+          </p>
+          <a href="" class="big_btn btn">Скачать резюме</a>
+        </div>
+        <img src="../source_cont/Placeholder.png" alt="" />
+      </section>
+      <section id="skills_sec">
+        <div class="sec_hat">
+          <h3 class="sec_title" title-data="Что я умею">Навыки</h3>
+          <p class="sec_hd_text">
+            Я готов использовать все свои знания и возможности для выполнения
+            задачи.
+          </p>
+        </div>
+        <div class="skills_sec_cards">
+          <article class="skills_sec_card">
+            <img src="../source_cont/Skills_1.gif" alt="" />
+
+            <h3>Искусство</h3>
+            <p>
+              Я умею работать в таких программах как Aseprite, Photoshop, Adobe
+              Illustrator. Мне подвластно векторное и пиксельное искусство.
+            </p>
+            <a href="" class="btn small_btn">Узнать больше</a>
+          </article>
+          <article class="skills_sec_card">
+            <img src="../source_cont/Skills_2.png" alt="" />
+
+            <h3>Web-Разработка</h3>
+            <p>
+              Я владею всеми требуемыми языками, такими как HTML, CSS и
+              Javascript. Создание веб-сайтов мне даётся без проблем.
+            </p>
+            <a href="" class="btn small_btn">Узнать больше</a>
+          </article>
+          <article class="skills_sec_card">
+            <img src="../source_cont/Skills_1.gif" alt="" />
+
+            <h3>Дизайн</h3>
+            <p>
+              Идея для компании, создание её названия и логотипа, а также UI и
+              UX дизайн.
+            </p>
+            <a href="" class="btn small_btn">Узнать больше</a>
+          </article>
+        </div>
+      </section>
+      <section id="portfolio_sec">
+        <div class="portfolio_bg_hold"></div>
+        <div class="sec_hat">
+          <h3 class="sec_title" title-data="Мои работы">Портфолио</h3>
+        </div>
+
+        <div class="portofolio_manage">
+          <button class="portfolio_filter_btn active_pff_btn">Все</button>
+          <button class="portfolio_filter_btn">Адаптация</button>
+          <button class="portfolio_filter_btn">Веб</button>
+          <button class="portfolio_filter_btn">Дизайн</button>
+          <button class="portfolio_filter_btn">Логотипы</button>
+        </div>
+        <div class="portfolio_cards">
+          <div class="portfolio_image logo">
+            <img src="../source_cont/Pf_logo1.png" class="pf_img_m" alt="" />
+            <div class="pf_img_overlay"></div>
+          </div>
+          <div class="portfolio_image logo">
+            <img src="../source_cont/Pf_logo2.png" class="pf_img_m" alt="" />
+            <div class="pf_img_overlay"></div>
+          </div>
+          <div class="portfolio_image logo">
+            <img src="../source_cont/Pf_logo3.png" class="pf_img_m" alt="" />
+            <div class="pf_img_overlay"></div>
+          </div>
+          <div class="portfolio_image logo">
+            <img src="../source_cont/Adapt_web_1.png" class="pf_img_m" alt="" />
+            <div class="pf_img_overlay"></div>
+          </div>
+          <div class="portfolio_image logo">
+            <img src="../source_cont/Pf_logo3.png" class="pf_img_m" alt="" />
+            <div class="pf_img_overlay"></div>
+          </div>
+        </div>
+      </section>
+      <section id="about_me_sec">
+        <div class="sec_hat">
+          <h3 class="sec_title" title-data="Кто я">Обо мне</h3>
+        </div>
+        <div class="about_me_sec_main">
+          <div class="abme_sec_col">
+            <h3>Привет, меня зовут</h3>
+            <p>
+              Александр, я -креативный Front-end и Python разработчик, художник
+              и веб-дизайнер с более чем 2-летним опытом. Я умею создавать
+              уникальные вебсайты, при помощи HTML, CSS и JavaScript, а также
+              различных Frameworks. Также, я имею навыки в создании логотипов,
+              рекламных бордов, рисовании Pixel-art и векторных изображений .
+            </p>
+
+            <ul class="abme_lang_list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+            </ul>
+            <a href="" class="btn big_btn">Подробнее</a>
+          </div>
+          <img src="../source_cont/Placeholder.png" alt="" />
+        </div>
+      </section>
+      <div id="reviews_sec">
+        <div class="sec_at">
+          <h3 class="sec_title" title-data="Мои">Отзывы</h3>
+        </div>
+
+
+      </div>
+      <h1>THIS IS</h1>
+      <p>THE BEST WEBSITE</p>
+    </main>
   </body>
   <script src="../scripts/jquery-3.6.0.min.js"></script>
   <script src="../scripts/index.js"></script>

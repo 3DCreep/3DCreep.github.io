@@ -3,6 +3,7 @@
   --text: #060604;
   --background: #f8f7f2;
   --primary: #56995b;
+  --primary-dark: #395b38;
   --secondary: #dbebe0;
   --accent: #315511;
 }
@@ -13,6 +14,8 @@
   --primary: #66a96a;
   --secondary: #142419;
   --accent: #caeeaa;
+  --accent-dark: #467a18;
+  --primary-dark: #395b38;
 }
 
 /* Basics */
@@ -27,15 +30,133 @@ html {
   color: var(--text);
   font-family: "Fira Code", monospace;
   transition: ease-in-out 0.3s;
+  scroll-behavior: smooth;
 }
 
 section {
   display: flex;
-  padding: 5rem;
+  flex-direction: column;
+  padding: 2rem 12rem;
+  margin-bottom: 8rem;
 }
 
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--background);
+  box-shadow: 0px 13px 0px 0px var(--primary-dark);
+  font-weight: 700;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  box-shadow: 0px 10px 0px 0px var(--primary-dark);
+}
+
+.btn:active {
+  transform: translateY(8px);
+  box-shadow: 0px 5px 0px 0px var(--primary-dark);
+}
+
+.big_btn {
+  padding: 20px 50px;
+}
+
+.small_btn {
+  padding: 8px 25px;
+}
+
+.sec_hat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.sec_title {
+  font-size: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.sec_title::before {
+  content: attr(title-data);
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.sec_title::after {
+  content: "";
+  background-color: var(--accent);
+  width: 80px;
+  height: 5px;
+  border-radius: 3px;
+}
+
+.sec_hd_text {
+  font-size: 1.25rem;
+  max-width: 600px;
+  line-height: 2rem;
+}
+
+#theme_btn {
+  width: 50px;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background-color: var(--primary);
+  position: fixed;
+  top: 45%;
+  left: 1rem;
+}
+#theme_btn img {
+  width: inherit;
+}
+
+.themebtn_ind {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  width: inherit;
+  height: 50%;
+  background-color: #fff;
+  mix-blend-mode: color-dodge;
+  filter: blur(0.2);
+  transition: ease-in-out 0.3s;
 }
 
 /* Basics end */
@@ -45,7 +166,7 @@ header {
   flex-direction: row;
   align-items: center;
   height: 10rem;
-  padding: 3rem;
+  padding: 2rem 8rem;
 }
 
 .head_logo {
@@ -55,12 +176,12 @@ header {
   column-gap: 2rem;
 }
 .head_logo span {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: "Handjet", sans-serif;
   font-weight: 200;
 }
 .head_logo img {
-  max-width: 5rem;
+  max-width: 4rem;
 }
 
 nav {
@@ -72,7 +193,6 @@ nav {
 nav a {
   font-size: 1.5rem;
   color: var(--text);
-  text-decoration: none;
   transition: ease-in-out 0.2s;
 }
 nav a:hover {
@@ -81,5 +201,124 @@ nav a:hover {
 
 /* End header */
 /* Main section */
+#main_sec {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_sec_cont {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  gap: 2rem;
+  font-size: 1.25rem;
+}
+.main_sec_cont h1 {
+  font-size: 3.5rem;
+}
+
+/* Main section end */
+/* Skill section */
+.skills_sec_cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skills_sec_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+  gap: 1rem;
+  font-size: 1.15rem;
+}
+.skills_sec_card h3 {
+  font-size: 1.6rem;
+}
+
+/* Skill section end */
+/* Portfolio section */
+.portfolio_bg_hold {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  transform: translateY(-3rem);
+  background-color: var(--primary-dark);
+  z-index: -3;
+}
+
+#portfolio_sec {
+  align-items: center;
+}
+
+.portofolio_manage {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}
+
+.portfolio_filter_btn {
+  color: var(--text);
+  font-size: 1.3rem;
+  background-color: transparent;
+  padding: 0.5rem 1.25rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.active_pff_btn {
+  background-color: var(--text);
+  color: var(--primary-dark);
+}
+
+.portfolio_cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.portfolio_image {
+  width: 25%;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+/* Portfolio section end */
+/* About me section */
+.about_me_sec_main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.about_me_sec_main img {
+  max-width: 33%;
+}
+
+.abme_sec_col {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10rem;
+  font-size: 1.25rem;
+  row-gap: 2rem;
+}
+
+.abme_lang_list {
+  display: flex;
+  flex-direction: row;
+}
+.abme_lang_list li {
+  padding-right: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--accent);
+  border-right: solid 5px var(--accent);
+}
 
 /*# sourceMappingURL=style.css.map */
