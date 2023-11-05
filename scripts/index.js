@@ -9,3 +9,25 @@ $("#theme_btn").on("click", function () {
     indit.css("top", "0%");
   }
 });
+const revs = $(".reviews_sec_cards");
+const rev = $(".reviews_sec_card");
+const width = rev.outerWidth();
+let pixcount = 0;
+
+function carouselright() {
+  pixcount += width + 30;
+  if (pixcount > width * 2 + 30 * 2) {
+    pixcount = 0;
+  }
+  revs.css("transform", `translateX(-${pixcount}px)`);
+
+  console.log(pixcount);
+}
+function carouselleft() {
+  pixcount -= width + 30;
+  if (pixcount < 0) {
+    pixcount = width * 2 + 30 * 2;
+  }
+  revs.css("transform", `translateX(-${pixcount}px)`);
+  console.log(pixcount);
+}
