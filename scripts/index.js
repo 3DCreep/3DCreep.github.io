@@ -31,3 +31,8 @@ function carouselleft() {
   revs.css("transform", `translateX(-${pixcount}px)`);
   console.log(pixcount);
 }
+$(".hamburger_menu").on("click", () => {
+  const nav = $("nav");
+  nav.toggleClass("burger_open");
+  $(".bar ").toggleClass("bar_active");
+});

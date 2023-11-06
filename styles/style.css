@@ -26,6 +26,7 @@
 }
 
 html {
+  font-size: 16px;
   background-color: var(--background);
   color: var(--text);
   font-family: "Fira Code", monospace;
@@ -63,6 +64,7 @@ ul {
 .btn {
   display: flex;
   width: fit-content;
+  text-align: center;
   justify-content: center;
   align-items: center;
   background-color: var(--primary);
@@ -125,6 +127,11 @@ ul {
   font-size: 1.25rem;
   max-width: 600px;
   line-height: 2rem;
+}
+
+.container {
+  display: flex;
+  position: relative;
 }
 
 #theme_btn {
@@ -190,14 +197,83 @@ nav {
   flex-direction: row;
   margin-left: auto;
   column-gap: 3.5rem;
+  row-gap: 1rem;
+}
+nav .head_logo {
+  display: none;
 }
 nav a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text);
   transition: ease-in-out 0.2s;
 }
 nav a:hover {
   box-shadow: 0px 3px 0px 0px var(--text);
+}
+
+.hamburger_menu {
+  margin-left: auto;
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: ease-in-out 0.5s;
+  width: 2.7rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  width: 4rem;
+}
+.hamburger path {
+  stroke: var(--text);
+}
+
+.burger_open {
+  top: 0 !important;
+}
+
+.bar {
+  position: relative;
+  min-width: 3rem;
+  height: 0.2rem;
+  background-color: var(--text);
+  border-radius: 0.5rem;
+  transition: ease-in-out 0.5s;
+}
+
+.bar::before {
+  transform: translateY(-10px);
+}
+
+.bar::after {
+  transform: translateY(10px);
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  width: 3rem;
+  height: 0.2rem;
+  background-color: var(--text);
+  position: absolute;
+  border-radius: 0.2rem;
+  transition: ease-in-out 0.5s;
+}
+
+.bar_active {
+  transform: rotateZ(360deg);
+  background-color: transparent;
+  position: fixed;
+}
+
+.bar_active::before {
+  transform: rotateZ(45deg);
+}
+
+.bar_active::after {
+  transform: rotateZ(-45deg);
 }
 
 /* End header */
@@ -209,13 +285,12 @@ nav a:hover {
   overflow: hidden;
 }
 #main_sec img {
-  min-width: 50%;
+  position: relative;
+  min-width: 33%;
   transform: rotateZ(-30deg);
-  margin-left: 30rem;
 }
 
 .main_sec_cont {
-  display: flex;
   flex-direction: column;
   min-width: 40%;
   max-width: 50%;
@@ -229,9 +304,10 @@ nav a:hover {
 /* Main section end */
 /* Skill section */
 .skills_sec_cards {
-  display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .skills_sec_card {
@@ -239,7 +315,8 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 25%;
+  min-width: 15rem;
+  max-width: 20rem;
   gap: 1rem;
   font-size: 1.15rem;
 }
@@ -285,7 +362,6 @@ nav a:hover {
 }
 
 .portfolio_cards {
-  display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 2rem;
@@ -301,18 +377,18 @@ nav a:hover {
 /* Portfolio section end */
 /* About me section */
 .about_me_sec_main {
-  display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 .about_me_sec_main img {
   max-width: 33%;
 }
 
 .abme_sec_col {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  margin-right: 10rem;
   font-size: 1.25rem;
   row-gap: 2rem;
 }
@@ -324,6 +400,7 @@ nav a:hover {
 .abme_lang_list li {
   padding-right: 1.5rem;
   margin-right: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 500;
   color: var(--accent);
@@ -414,8 +491,62 @@ nav a:hover {
   font-size: 1rem;
 }
 
-.left_card {
-  left: 100%;
+@media (max-width: 1450px) {
+  .abme_lang_list {
+    flex-wrap: wrap;
+  }
+  .revscc_hold {
+    font-size: 1.15rem;
+    gap: 1.5rem;
+  }
+  #main_sec img {
+    margin-left: 26rem;
+  }
+  header {
+    padding: 2rem 6rem;
+  }
+  section {
+    padding: 2rem 6rem;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 15px;
+  }
+  nav {
+    flex-wrap: wrap;
+    margin-left: 1.5rem;
+  }
+  nav a {
+    font-size: 1.05;
+  }
+  .head_logo span {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 850px) {
+  .hamburger_menu {
+    display: flex;
+  }
+  nav {
+    transition: ease-in-out 0.5s;
+    position: fixed;
+    top: -120%;
+    left: 0%;
+    margin-left: 0;
+    padding: 10rem;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: var(--background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  nav .head_logo {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
