@@ -45,17 +45,19 @@ function adapt_on() {
   images.css({ display: "none" });
   $(".adapt").css({ display: "flex" });
 }
-function adapt_on() {
-  images.css({ display: "none" });
-  $(".adapt").css({ display: "flex" });
-}
-
-function adapt_on() {
-  images.css({ display: "none" });
-  $(".adapt").css({ display: "flex" });
-}
 
 function logo_on() {
+  // if (images.attr("class") == "portfolio_image logo") {
+  //   alert("test");
+  // }
   images.css({ display: "none" });
   $(".logo").css({ display: "flex" });
+}
+function web_on() {
+  images.css({ display: "none" });
+  $(".web").css({ display: "flex" });
+}
+function design_on() {
+  images.css({ display: "none" });
+  $(".design").css({ display: "flex" });
 }

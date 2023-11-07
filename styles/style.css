@@ -376,6 +376,9 @@ nav a:hover {
   justify-content: center;
   transition: 0.4s;
 }
+.portfolio_image img {
+  height: 100%;
+}
 
 .pf_img_overlay {
   visibility: hidden;
@@ -631,12 +634,12 @@ nav a:hover {
     margin-bottom: 9rem;
   }
   .portfolio_image {
-    width: 15rem;
-    height: 12rem;
+    width: 17rem;
+    height: 14rem;
   }
   .portfolio_image:hover {
-    width: 16rem;
-    height: 13rem;
+    width: 18.5rem;
+    height: 15.5rem;
   }
 }
 @media (max-width: 700px) {
@@ -662,6 +665,14 @@ nav a:hover {
     flex-wrap: wrap;
     row-gap: 1rem;
   }
+  .portfolio_image {
+    width: 100%;
+    height: 15rem;
+  }
+  .portfolio_image:hover {
+    width: 19.5rem;
+    height: 16.5rem;
+  }
   .abme_lang_list {
     flex-direction: column;
     padding-left: 1rem;
@@ -673,6 +684,9 @@ nav a:hover {
   .reviews_sec_card {
     padding: 2rem;
     gap: 1.3rem;
+  }
+  .reviews_movebtn svg {
+    max-height: 6rem;
   }
 }
 @media (max-width: 430px) {
