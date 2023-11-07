@@ -36,3 +36,26 @@ $(".hamburger_menu").on("click", () => {
   nav.toggleClass("burger_open");
   $(".bar ").toggleClass("bar_active");
 });
+
+const images = $(".portfolio_image");
+function all_on() {
+  images.css({ display: "flex" });
+}
+function adapt_on() {
+  images.css({ display: "none" });
+  $(".adapt").css({ display: "flex" });
+}
+function adapt_on() {
+  images.css({ display: "none" });
+  $(".adapt").css({ display: "flex" });
+}
+
+function adapt_on() {
+  images.css({ display: "none" });
+  $(".adapt").css({ display: "flex" });
+}
+
+function logo_on() {
+  images.css({ display: "none" });
+  $(".logo").css({ display: "flex" });
+}

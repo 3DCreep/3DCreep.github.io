@@ -353,7 +353,7 @@ nav a:hover {
   font-weight: 500;
 }
 
-.active_pff_btn {
+.portfolio_filter_btn:focus {
   background-color: var(--text);
   color: var(--primary-dark);
 }
@@ -362,11 +362,12 @@ nav a:hover {
   flex-flow: row wrap;
   justify-content: center;
   gap: 2rem;
+  transition: 0.4s;
 }
 
 .portfolio_image {
   width: 25%;
-  height: 17w;
+  height: 17vw;
   overflow: hidden;
   border-radius: 2rem;
   object-fit: cover;
@@ -587,6 +588,9 @@ nav a:hover {
   section {
     padding: 2rem 4rem;
   }
+  header {
+    padding: 2rem 4rem;
+  }
   #main_sec {
     flex-direction: column;
   }
@@ -619,19 +623,72 @@ nav a:hover {
   .about_me_sec_main {
     flex-direction: column;
   }
+  .about_me_sec_main img {
+    max-width: 65%;
+  }
   .abme_sec_col {
     width: 100%;
     margin-bottom: 9rem;
-    align-items: center;
-    text-align: center;
   }
   .portfolio_image {
-    width: 13rem;
-    height: 10rem;
+    width: 15rem;
+    height: 12rem;
   }
   .portfolio_image:hover {
-    width: 14rem;
-    height: 11rem;
+    width: 16rem;
+    height: 13rem;
+  }
+}
+@media (max-width: 700px) {
+  .reviews_sec_carousel {
+    flex-direction: column;
+  }
+  .scr_thin_carousel_btns {
+    display: flex;
+  }
+  .scr_wide_carousel_btn {
+    display: none !important;
+  }
+  .carousel_cont {
+    max-width: 100%;
+  }
+}
+@media (max-width: 525px) {
+  html {
+    font-size: 13px;
+  }
+  .portofolio_manage {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+  .abme_lang_list {
+    flex-direction: column;
+    padding-left: 1rem;
+    border-left: solid 5px var(--accent);
+  }
+  .abme_lang_list li {
+    width: min-content;
+  }
+  .reviews_sec_card {
+    padding: 2rem;
+    gap: 1.3rem;
+  }
+}
+@media (max-width: 430px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media (max-width: 300px) {
+  html {
+    font-size: 10px;
+  }
+  section {
+    padding: 2rem;
+  }
+  header {
+    padding: 2rem;
   }
 }
 

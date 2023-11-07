@@ -7,17 +7,18 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="theme_btn">
-      <img src="../source_cont/Th-Light.svg" alt="" />
-      <img src="../source_cont/Th-Dark.svg" alt="" />
-      <div class="themebtn_ind">
-    </button>
+    
     <header>
       <div class="head_logo">
         <span>ALEXOS</span>
         <img src="../source_cont/Placeholder.png" alt="" />
       </div>
       <nav id="nav">
+        <button id="theme_btn">
+      <img src="../source_cont/Th-Light.svg" alt="" />
+      <img src="../source_cont/Th-Dark.svg" alt="" />
+      <div class="themebtn_ind">
+    </button>
         <div class="head_logo">
           <span>ALEXOS</span>
           <img src="../source_cont/Placeholder.png" alt="" />
@@ -108,11 +109,11 @@
         </div>
 
         <div class="portofolio_manage">
-          <button class="portfolio_filter_btn active_pff_btn">Все</button>
-          <button class="portfolio_filter_btn">Адаптация</button>
+          <button class="portfolio_filter_btn " onclick="all_on()">Все</button>
+          <button class="portfolio_filter_btn" onclick="adapt_on()">Адаптация</button>
           <button class="portfolio_filter_btn">Веб</button>
           <button class="portfolio_filter_btn">Дизайн</button>
-          <button class="portfolio_filter_btn">Логотипы</button>
+          <button class="portfolio_filter_btn" onclick="logo_on()">Логотипы</button>
         </div>
         <div class="portfolio_cards container">
           <div class="portfolio_image logo">
@@ -133,7 +134,7 @@
               <a href="../source_cont/Pf_logo3.png" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
             </div>
           </div>
-          <div class="portfolio_image logo">
+          <div class="portfolio_image adapt">
             <img src="../source_cont/Adapt_web_1.png" class="pf_img_m" alt="" />
             <div class="pf_img_overlay" >
               <a href="./From_Figma/main.html" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
