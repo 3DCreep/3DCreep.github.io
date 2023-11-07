@@ -55,8 +55,9 @@
           </p>
           <a href="" class="big_btn btn">Скачать резюме</a>
         </div>
-        
+      
         <img src="../source_cont/Main_pic.gif" alt="" />
+      
        
       </section>
       <section id="skills_sec">
@@ -116,23 +117,33 @@
         <div class="portfolio_cards container">
           <div class="portfolio_image logo">
             <img src="../source_cont/Pf_logo1.png" class="pf_img_m" alt="" />
-            <div class="pf_img_overlay"></div>
+            <div class="pf_img_overlay">
+              <a href="../source_cont/Pf_logo1.png" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
+            </div>
           </div>
           <div class="portfolio_image logo">
             <img src="../source_cont/Pf_logo2.png" class="pf_img_m" alt="" />
-            <div class="pf_img_overlay"></div>
+            <div class="pf_img_overlay">
+              <a href="../source_cont/Pf_logo2.png" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
+            </div>
           </div>
           <div class="portfolio_image logo">
-            <img src="../source_cont/Pf_logo3.png" class="pf_img_m" alt="" />
-            <div class="pf_img_overlay"></div>
+            <img src="../source_cont/Pf_logo3.png" class="pf_img_m" alt=""  />
+            <div class="pf_img_overlay" >
+              <a href="../source_cont/Pf_logo3.png" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
+            </div>
           </div>
           <div class="portfolio_image logo">
             <img src="../source_cont/Adapt_web_1.png" class="pf_img_m" alt="" />
-            <div class="pf_img_overlay"></div>
+            <div class="pf_img_overlay" >
+              <a href="./From_Figma/main.html" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
+            </div>
           </div>
           <div class="portfolio_image logo">
-            <img src="../source_cont/Pf_logo3.png" class="pf_img_m" alt="" />
-            <div class="pf_img_overlay"></div>
+            <img src="../source_cont/Pf_logo3.png" class="pf_img_m" alt=""  />
+             <div class="pf_img_overlay" >
+              <a href="" ><img src="../source_cont/Arrow_ptf.svg" alt=">"> Посмотреть</a>
+            </div>
           </div>
         </div>
       </section>
@@ -162,12 +173,12 @@
           <img src="../source_cont/Placeholder_vert.png" alt="" />
         </div>
       </section>
-      <div id="reviews_sec">
+      <section id="reviews_sec">
         <div class="sec_hat">
           <h3 class="sec_title" title-data="Мои">Отзывы</h3>
         </div>
         <div class="reviews_sec_carousel">
-          <button class="reviews_movebtn" id="movebtn_left" onclick="carouselleft()"><svg width="23" height="80" viewBox="0 0 23 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="reviews_movebtn scr_wide_carousel_btn" id="movebtn_left" onclick="carouselleft()"><svg width="23" height="80" viewBox="0 0 23 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 2L2 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
             <path d="M21 78L2 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
             </svg></button>
@@ -380,10 +391,20 @@
        
         
         </div>
-        <button class="reviews_movebtn" id="movebtn_right" onclick="carouselright()"><svg width="23" height="80" viewBox="0 0 23 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="reviews_movebtn scr_wide_carousel_btn" id="movebtn_right" onclick="carouselright()"><svg width="23" height="80" viewBox="0 0 23 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 2L21 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
           <path d="M2 78L21 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
           </svg></button>
+          <div class="scr_thin_carousel_btns">
+            <button class="reviews_movebtn " id="movebtn_left" onclick="carouselleft()"><svg width="23" height="80" viewBox="0 0 23 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 2L2 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
+              <path d="M21 78L2 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
+              </svg></button>
+            <button class="reviews_movebtn" id="movebtn_right" onclick="carouselright()"><svg width="23" height="80" viewBox="0 0 23 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L21 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
+              <path d="M2 78L21 40" stroke="#F9F9F9" stroke-width="3" stroke-linecap="round"/>
+              </svg></button>
+          </div>
 
         </div>
 
