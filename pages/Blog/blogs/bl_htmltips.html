@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dracula">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../../../node_modules/highlight.js/styles/default.css">
+    <script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="head_logo">
+        <span>ALEXOS</span>
+        <img src="./content/Logo_placeholder.png" alt="" />
+      </div>
+      <nav id="nav">
+        <a href="" class="head_link">Main</a>
+        <a href="" class="head_link">About me</a>
+        <a href="" class="head_link">Blogs</a>
+
+        <a href="" class="head_link">Contacts</a>
+      </nav>
+      <div class="hamburger_menu">
+        <div class="bar"></div>
+      </div>
+    </header>
+    <div class="blog_name container"> 
+      <h1>HTML tips no one </br>uses.</h1>
+    </div>
+    <main class="blog">
+        <p class="blog_part ">The more I learn HTML, the more I realize how many things were created just to simplify the code. Sadly, most programmers haven’t even heard of them, which makes them kind of useless. I’d like to share some tips with you, because using simple lines of code can save a lot of your time.</p>
+        <h3 class="blog_h"><span class="func"> onclick</span></h3>
+        <p class="blog_part">onclick=”” is an HTML attribute that causes an element to execute JS code when it is clicked. It means you don’t have to type smth.<span class="func">addEventListener</span>(<span class="string">“click”</span>, <span class="operator">() => {}</span>); (or smth. <span class="func">on</span>(<span class="string">“click”</span>, <span class="operator">() => {}</span>); if you use JQuery) each time. The fact that this is so little known kills me, because you can make your code much clearer with it. Here’s an example of its usage:</p>
+        <pre><code class="language-html">&lt;p&gt;Hi!&lt;/p&gt; <p>Hi!</p></code></pre>
+        <button class="btn" id="dsp_btn" onclick="disappear()">Click me!</button>
+        <p class="blog_part">See? Less code! And it goes further! If your elements share the same function with different variables, you can just name them in the <span class="func"> onclick </span>attribute!</p>
+        <div class="group">
+          <button class="btn " onclick="alr('Pika')">Pika</button>
+          <button class="btn " onclick="alr('Boo')">Boo</button>
+          <button class="btn " onclick="alr('Pikaboo')">Pikaboo</button>
+        
+        </div>
+        <p class="blog_part">Instead of:</p>
+        <div class="group">
+          <button class="btn " id="pika">Pika</button>
+          <button class="btn " id="boo">Boo</button>
+          <button class="btn " id="pikaboo">Pikaboo</button>
+        </div>
+        <p class="blog_part">More elements, more code. With <span class="func">onclick</span>, not anymore! Seriously, I love it. </p>
+        <h3 class="blog_h"><span class="html_br"> &lt;</span> <span class="html_obj"> details </span><span class="html_br">&gt;  </span>  and <span class="html_br"> &lt;</span> <span class="html_obj"> summary </span> <span class="html_br">&gt; </span></h3>
+        <p class="blog_part">At some point of creating a website, you might want to have a collapsible text block. Of course, you can make everything manually and even get very creative. But if you don't need that much originality, it's always a choice to use this construction:</p>
+        <details>
+          <summary>See the answer</summary>
+          <p>This man was Albert Einstein</p>
+
+        </details>
+        <p class="blog_part">Easy! You can also redact or hide the arrow using <span class="html_obj">summary</span><span class="operator">::</span><span class="func">marker</span>.</p>
+    </main>
+  </body>
+
+  <script src="../../../jquery-3.6.0.min.js"></script>
+  <script src="./script.js"></script>
+  <script>
+   
+     
+      function disappear() {
+         button = document.getElementById("dsp_btn");
+          button.style.display = "none";
+};
+
+document.getElementById("pika").addEventListener("click", function() {alr("Pika")}, false)
+document.getElementById("boo").addEventListener("click", function() {alr("Boo")}, false)
+document.getElementById("pikaboo").addEventListener("click", function() {alr("Pikaboo")}, false)
+function alr(text, event) {
+
+  text += "!";
+  alert(text);
+ };
+
+  </script>
+</html>
