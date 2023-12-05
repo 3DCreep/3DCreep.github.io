@@ -104,14 +104,15 @@ summary {
   display: flex;
   font-size: 2.15rem;
   font-weight: 500;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 0rem;
   column-gap: 0.7rem;
 }
 
 .blog {
   display: flex;
   flex-direction: column;
-  row-gap: 4rem;
+  row-gap: 2.5rem;
   width: 90%;
 }
 
@@ -124,6 +125,7 @@ summary {
   padding: 0 12rem 2rem 12rem;
   font-size: 3rem;
 }
+
 .blog_name h1 {
   border-bottom: solid 5px var(--basic_text);
   line-height: 10rem;
