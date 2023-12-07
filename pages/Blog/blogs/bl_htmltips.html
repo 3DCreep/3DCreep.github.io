@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/default.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+ 
     <style> 
     .attr_h{
       font-size: 1.25rem;
@@ -35,12 +36,12 @@
         <span>ALEXOS</span>
         <img src="./content/Logo_placeholder.png" alt="" />
       </div>
-      <nav id="nav">
-        <a href="" class="head_link">Main</a>
-        <a href="" class="head_link">About me</a>
-        <a href="" class="head_link">Blogs</a>
+      <nav class="nav">
+        <a href="" class="link">Main</a>
+        <a href="" class="link">About me</a>
+        <a href="" class="link">Blogs</a>
 
-        <a href="" class="head_link">Contacts</a>
+        <a href="" class="link">Contacts</a>
       </nav>
       <div class="hamburger_menu">
         <div class="bar"></div>
@@ -53,14 +54,24 @@
         <p class="blog_part ">The more I learn HTML, the more I realize how many things were created just to simplify the code. Sadly, most programmers haven’t even heard of them, which makes them kind of useless. I’d like to share some tips with you, because using simple lines of code can save a lot of your time.</p>
         <h3 class="blog_h"><span class="func"> onclick</span></h3>
         <p class="blog_part">onclick=”” is an HTML attribute that causes an element to execute JS code when it is clicked. It means you don’t have to type smth.<span class="func">addEventListener</span>(<span class="string">“click”</span>, <span class="operator">() => {}</span>); (or smth. <span class="func">on</span>(<span class="string">“click”</span>, <span class="operator">() => {}</span>); if you use JQuery) each time. The fact that this is so little known kills me, because you can make your code much clearer with it. Here’s an example of its usage:</p>
-        <pre><code class="javascript">
-          // Your JavaScript code here
-          function example() {
-              console.log('Hello, world!');
-          }
-      </code></pre>
+        <pre><code  class="language-html"> 
+          &lt;div class=&quot;container&quot;&gt;
+          &lt;button class=&quot;btn&quot; id=&quot;dsp_btn&quot; onclick=&quot;disappear()&quot;&gt;Click me!&lt;/button&gt;
+          &lt;/div&gt; </code></pre>
+      <pre><code  class="language-javascript"> 
+        function disappear() {
+          let button = document.getElementById("dsp_btn");
+           button.style.display = "none";
+         };
+      
+        </code></pre>
         <button class="btn" id="dsp_btn" onclick="disappear()">Click me!</button>
         <p class="blog_part">See? Less code! And it goes further! If your elements share the same function with different variables, you can just name them in the <span class="func"> onclick </span>attribute!</p>
+        <pre><code  class="language-html"> 
+          &lt;button class=&quot;btn &quot; onclick=&quot;alr('Pika')&quot;&gt;Pika&lt;/button&gt;
+          &lt;button class=&quot;btn &quot; onclick=&quot;alr('Boo')&quot;&gt;Boo&lt;/button&gt;
+          &lt;button class=&quot;btn &quot; onclick=&quot;alr('Pikaboo')&quot;&gt;Pikaboo&lt;/button&gt; 
+        </code></pre>
         <div class="group">
           <button class="btn " onclick="alr('Pika')">Pika</button>
           <button class="btn " onclick="alr('Boo')">Boo</button>
@@ -81,11 +92,11 @@
           <p>This man was Albert Einstein</p>
 
         </details>
-        <p class="blog_part">Easy! You can also redact or hide the arrow using <span class="html_obj">summary</span><span class="operator">::</span><span class="func">marker</span>.</p>
-        <h4 class="blog_h">Attributes</h4>
+        <p class="blog_part">Easy! You can also redact or hide the arrow using <span class="html_obj">summary</span><span class="operator">::</span><span class="func">marker</span>. Any color, any square! But I don't think it's possible to change the marker's position, because of <span class="tag"> text-align</span><span class="operator">:</span> <span class="state">start</span> <span class="operator">!important</span><span class="word_sign">;</span></p>
+        <h4 class="blog_h">Custom attributes</h4>
         <p class="blog_part">Known by every Front-end employee, not by every Front-end developer. You can make your own attributes and use them however you want. This way you can make themes, shorten your HTML with <span class="operator">::</span><span class="func">before</span> or <span class="operator">::</span><span class="func">after</span>, etc. </p>
         <div class="group"><h4 up="Different" class="attr_h">Befores</h4> <h4 up="With" class="attr_h">Same properties</h4></div>
-        <p class="blog_part">Themes on this website were created with using custom  <span class="html_br"> &lt;</span><span class="html_obj"> html </span><span class="html_br">&gt;  </span> </p>
+        <p class="blog_part">You can use them for pretty much anything. Variable CSS, optimized JS. Making HTML elements unique is way easier using attrs. Themes on this website were created with using custom  <span class="html_br"> &lt;</span><span class="html_obj"> html </span><span class="html_br">&gt;  </span> attribute.</p>
         <div class="blog_h">
           Color picker
         </div>
@@ -96,19 +107,40 @@
         
       </div>
       <p class="blog_part">I think this is very useful! And of course, you can edit the input! I've used it on my websites as well.</p>
-      <p class="blog_part">Finally, the last, but not the least:</p>
+      <p class="blog_part">Finally, last but not least:</p>
+      <p class="blog_h">Input recommendations</p>
+      <p class="blog_part">This thing is actually  implemented in most of the browsers. Well, sort of. It looks at the type of your input and recommends the data you've typed before. But you can make it recommend whatever you want. Take a look at this: </p>
+      <input list="subjects">
+      <datalist id="subjects">
+        <option >Bulbasaur</option>
+        <option >Squirtle</option>
+        <option >Charmander</option>
+        <option >Pikachu</option>
+      </datalist>
+      <p class="blog_part">Implementing it in a form is nice. In a searchbar is better. </p>
+      <p class="blog_part">That's basically it... I sure do know more cool things about HTML, but listing them all would take too much time. I hope this blog helps someone!</p>
+      <p class="blog_part">06.12.23</p>
     </main>
+    <footer class="footer">
+      <div class="foot_nav">
+      <div class="head_logo">
+        <span>ALEXOS</span>
+        <img src="./content/Logo_placeholder.png" alt="" />
+      </div>
+      <nav class="nav">
+        <a href="" class="link">Main</a>
+        <a href="" class="link">About me</a>
+        <a href="" class="link">Blogs</a>
+  
+        <a href="" class="link">Contacts</a>
+      </nav>
+    </div>
+    <div class="foot_lc">
+      <p>Last update: 06.12.23</p> <p>&copy;2023. All rights reserved.</p>
+    </div>
+    </footer>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/lib/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/lib/languages/javascript.js"></script>
-
-  <!-- Initialize Highlight.js after the document has loaded -->
-  <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-          // Highlight.js initialization
-          hljs.highlightAll();
-      });
-  </script>
+ 
 
   <script src="../../../jquery-3.6.0.min.js"></script>
   <script src="./script.js"></script>
