@@ -3,60 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main_styles.css" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
- 
-    <style> 
-    .attr_h{
-      font-size: 1.25rem;
-      display: flex;
-      flex-direction: column;
-    }
-    .attr_h::before {
-      content: attr(up);
-      color: var(--markup);
-      font-size: 1rem;
-      font-weight: 400;
 
-
-    }
-
-    
-    
+    <style>
+      .attr_h {
+        font-size: 1.25rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .attr_h::before {
+        content: attr(up);
+        color: var(--markup);
+        font-size: 1rem;
+        font-weight: 400;
+      }
     </style>
-   
-    
-
 
     <title>Document</title>
   </head>
   <body>
+    <progress id="progressbar" value="0" max="100" perc="0%"></progress>
     <header id="header">
       <div class="head_logo">
         <span>ALEXOS</span>
         <img src="./content/Logo_placeholder.png" alt="" />
       </div>
-      <nav class="nav">
+      <nav class="main_nav">
         <a href="" class="link">Main</a>
         <a href="" class="link">About me</a>
         <a href="" class="link">Blogs</a>
 
         <a href="" class="link">Contacts</a>
+        <div class="head_logo nav_logo">
+          <span>ALEXOS</span>
+          <img src="./content/Logo_placeholder.png" alt="" />
+        </div>
       </nav>
-      <div class="hamburger_menu">
+      <div class="hamburger_menu" onclick="open_nav()">
         <div class="bar"></div>
       </div>
     </header>
-    <div class="blog_name container"> 
-      <h1>HTML tips no one </br>uses.</h1>
+    <div class="screen_warn">
+      <h2>
+        Warning! This website is not recommended to be visited on small screens.
+        Be prepared for unreadability and bugs.
+      </h2>
+    </div>
+    <div class="blog_name container">
+      <h1>HTML tips no one uses.</h1>
     </div>
     <main class="blog">
-        <p class="blog_part ">The more I learn HTML, the more I realize how many things were created just to simplify the code. Sadly, most programmers haven’t even heard of them, which makes them kind of useless. I’d like to share some tips with you, because using simple lines of code can save a lot of your time.</p>
-        <h3 class="blog_h"><span class="func"> onclick</span></h3>
-        <p class="blog_part">onclick=”” is an HTML attribute that causes an element to execute JS code when it is clicked. It means you don’t have to type smth.<span class="func">addEventListener</span>(<span class="string">“click”</span>, <span class="operator">() => {}</span>); (or smth. <span class="func">on</span>(<span class="string">“click”</span>, <span class="operator">() => {}</span>); if you use JQuery) each time. The fact that this is so little known kills me, because you can make your code much clearer with it. Here’s an example of its usage:</p>
-        <pre><code  class="language-html"> 
-          &lt;div class=&quot;container&quot;&gt;
-          &lt;button class=&quot;btn&quot; id=&quot;dsp_btn&quot; onclick=&quot;disappear()&quot;&gt;Click me!&lt;/button&gt;
+      <p class="blog_part">
+        The more I learn HTML, the more I realize how many things were created
+        just to simplify the code. Sadly, most programmers haven’t even heard of
+        them, which makes them kind of useless. I’d like to share some tips with
+        you, because using simple lines of code can save a lot of your time.
+      </p>
+      <h3 class="blog_h"><span class="func"> onclick</span></h3>
+      <p class="blog_part">
+        onclick=”” is an HTML attribute that causes an element to execute JS
+        code when it is clicked. It means you don’t have to type smth.<span
+          class="func"
+          >addEventListener</span
+        >(<span class="string">“click”</span>,
+        <span class="operator">() => {}</span>); (or smth.
+        <span class="func">on</span>(<span class="string">“click”</span>,
+        <span class="operator">() => {}</span>); if you use JQuery) each time.
+        The fact that this is so little known kills me, because you can make
+        your code much clearer with it. Here’s an example of its usage:
+      </p>
+      <pre><code  class="language-html">          &lt;div class=&quot;container&quot;&gt;
+            &lt;button class=&quot;btn&quot; id=&quot;dsp_btn&quot; onclick=&quot;disappear()&quot;&gt;Click me!&lt;/button&gt;
           &lt;/div&gt; </code></pre>
       <pre><code  class="language-javascript"> 
         function disappear() {
@@ -65,102 +84,246 @@
          };
       
         </code></pre>
-        <button class="btn" id="dsp_btn" onclick="disappear()">Click me!</button>
-        <p class="blog_part">See? Less code! And it goes further! If your elements share the same function with different variables, you can just name them in the <span class="func"> onclick </span>attribute!</p>
-        <pre><code  class="language-html"> 
+      <button class="btn" id="dsp_btn" onclick="disappear()">Click me!</button>
+      <p class="blog_part">
+        See? Less code! And it goes further! If your elements share the same
+        function with different variables, you can just name them in the
+        <span class="func"> onclick </span>attribute!
+      </p>
+      <pre><code  class="language-html"> 
           &lt;button class=&quot;btn &quot; onclick=&quot;alr('Pika')&quot;&gt;Pika&lt;/button&gt;
           &lt;button class=&quot;btn &quot; onclick=&quot;alr('Boo')&quot;&gt;Boo&lt;/button&gt;
           &lt;button class=&quot;btn &quot; onclick=&quot;alr('Pikaboo')&quot;&gt;Pikaboo&lt;/button&gt; 
         </code></pre>
-        <div class="group">
-          <button class="btn " onclick="alr('Pika')">Pika</button>
-          <button class="btn " onclick="alr('Boo')">Boo</button>
-          <button class="btn " onclick="alr('Pikaboo')">Pikaboo</button>
-        
-        </div>
-        <p class="blog_part">Instead of:</p>
-        <div class="group">
-          <button class="btn " id="pika">Pika</button>
-          <button class="btn " id="boo">Boo</button>
-          <button class="btn " id="pikaboo">Pikaboo</button>
-        </div>
-        <p class="blog_part">More elements, more code. With <span class="func">onclick</span>, not anymore! Seriously, I love it. </p>
-        <h3 class="blog_h"><span class="html_br"> &lt;</span> <span class="html_obj"> details </span><span class="html_br">&gt;  </span>  and <span class="html_br"> &lt;</span> <span class="html_obj"> summary </span> <span class="html_br">&gt; </span></h3>
-        <p class="blog_part">At some point of creating a website, you might want to have a collapsible text block. Of course, you can make everything manually and even get very creative. But if you don't need that much originality, it's always a choice to use this construction:</p>
-        <details>
-          <summary>See the answer</summary>
-          <p>This man was Albert Einstein</p>
-
-        </details>
-        <p class="blog_part">Easy! You can also redact or hide the arrow using <span class="html_obj">summary</span><span class="operator">::</span><span class="func">marker</span>. Any color, any square! But I don't think it's possible to change the marker's position, because of <span class="tag"> text-align</span><span class="operator">:</span> <span class="state">start</span> <span class="operator">!important</span><span class="word_sign">;</span></p>
-        <h4 class="blog_h">Custom attributes</h4>
-        <p class="blog_part">Known by every Front-end employee, not by every Front-end developer. You can make your own attributes and use them however you want. This way you can make themes, shorten your HTML with <span class="operator">::</span><span class="func">before</span> or <span class="operator">::</span><span class="func">after</span>, etc. </p>
-        <div class="group"><h4 up="Different" class="attr_h">Befores</h4> <h4 up="With" class="attr_h">Same properties</h4></div>
-        <p class="blog_part">You can use them for pretty much anything. Variable CSS, optimized JS. Making HTML elements unique is way easier using attrs. Themes on this website were created with using custom  <span class="html_br"> &lt;</span><span class="html_obj"> html </span><span class="html_br">&gt;  </span> attribute.</p>
-        <div class="blog_h">
-          Color picker
-        </div>
-        <p class="blog_part">Giving the visitor an ability to manually choose a color is hard, right? Wrong! Here's what you can do:</p>
-        <div class="group">
-        <label for="setcolor" id="setcolor_lb">Select color</label>
-        <input type="color" id="setcolor">
-        
+      <pre><code  class="language-javascript">
+          function alr(text, event) {
+            text += "!";
+            alert(text);
+           };
+          </code></pre>
+      <div class="group">
+        <button class="btn" onclick="alr('Pika')">Pika</button>
+        <button class="btn" onclick="alr('Boo')">Boo</button>
+        <button class="btn" onclick="alr('Pikaboo')">Pikaboo</button>
       </div>
-      <p class="blog_part">I think this is very useful! And of course, you can edit the input! I've used it on my websites as well.</p>
+      <p class="blog_part">Instead of:</p>
+      <pre><code  class="language-html"> 
+          &lt;button class=&quot;btn &quot; id=&quot;pika&quot;&gt;Pika&lt;/button&gt;
+          &lt;button class=&quot;btn &quot; id=&quot;boo&quot;&gt;Boo&lt;/button&gt;
+          &lt;button class=&quot;btn &quot; id=&quot;pikaboo&quot;&gt;Pikaboo&lt;/button&gt;
+        </code></pre>
+      <pre><code  class="language-javascript">
+          document.getElementById("pika").addEventListener("click", function() {alr("Pika")}, false);
+          document.getElementById("boo").addEventListener("click", function() {alr("Boo")}, false);
+          document.getElementById("pikaboo").addEventListener("click", function() {alr("Pikaboo")}, false);
+          function alr(text, event) {
+          text += "!";
+          alert(text);
+          };
+          </code></pre>
+      <div class="group">
+        <button class="btn" id="pika">Pika</button>
+        <button class="btn" id="boo">Boo</button>
+        <button class="btn" id="pikaboo">Pikaboo</button>
+      </div>
+      <p class="blog_part">
+        More elements, more code. With <span class="func">onclick</span>, not
+        anymore! Seriously, I love it.
+      </p>
+      <h3 class="blog_h">
+        <span class="html_br"> &lt;</span>
+        <span class="html_obj"> details </span
+        ><span class="html_br">&gt; </span> and
+        <span class="html_br"> &lt;</span>
+        <span class="html_obj"> summary </span>
+        <span class="html_br">&gt; </span>
+      </h3>
+      <p class="blog_part">
+        At some point of creating a website, you might want to have a
+        collapsible text block. Of course, you can make everything manually and
+        even get very creative. But if you don't need that much originality,
+        it's always a choice to use this construction:
+      </p>
+      <pre><code  class="language-html"> 
+          &lt;details&gt;
+          &lt;summary&gt;See the answer&lt;/summary&gt;
+          &lt;p&gt;This man was Albert Einstein&lt;/p&gt;
+          &lt;/details&gt;
+        </code></pre>
+      <pre><code  class="language-scss"> 
+          summary {
+            font-size: 1.5rem;
+          }
+          </code></pre>
+      <details>
+        <summary>See the answer</summary>
+        <p>This man was Albert Einstein</p>
+      </details>
+      <p class="blog_part">
+        Easy! You can also redact or hide the arrow using
+        <span class="html_obj">summary</span><span class="operator">::</span
+        ><span class="func">marker</span>. Any color, any square! But I don't
+        think it's possible to change the marker's position, because of
+        <span class="tag"> text-align</span><span class="operator">:</span>
+        <span class="state">start</span> <span class="operator">!important</span
+        ><span class="word_sign">;</span>
+      </p>
+      <h4 class="blog_h">Custom attributes</h4>
+      <p class="blog_part">
+        Known by every Front-end employee, not by every Front-end developer. You
+        can make your own attributes and use them however you want. This way you
+        can make themes, shorten your HTML with <span class="operator">::</span
+        ><span class="func">before</span> or <span class="operator">::</span
+        ><span class="func">after</span>, etc.
+      </p>
+      <pre><code  class="language-html"> 
+          &lt;div class=&quot;group&quot;&gt;
+          &lt;h4 up=&quot;Different&quot; class=&quot;attr_h&quot;&gt;Befores&lt;/h4&gt;
+          &lt;h4 up=&quot;With&quot; class=&quot;attr_h&quot;&gt;Same properties&lt;/h4&gt;
+          &lt;/div&gt;
+        </code></pre>
+      <pre><code  class="language-scss"> 
+          .attr_h{
+            font-size: 1.25rem;
+            display: flex;
+            flex-direction: column;
+          }
+          .attr_h::before {
+            content: attr(up);
+            color: var(--markup);
+            font-size: 1rem;
+            font-weight: 400;
+      
+      
+          }
+          </code></pre>
+      <div class="group">
+        <h4 up="Different" class="attr_h">Befores</h4>
+        <h4 up="With" class="attr_h">Same properties</h4>
+      </div>
+      <p class="blog_part">
+        You can use them for pretty much anything. Variable CSS, optimized JS.
+        Making HTML elements unique is way easier using attrs. Themes on this
+        website were created with using custom <span class="html_br"> &lt;</span
+        ><span class="html_obj"> html </span
+        ><span class="html_br">&gt; </span> attribute.
+      </p>
+
+      <div class="blog_h">Color picker</div>
+      <p class="blog_part">
+        Giving the visitor an ability to manually choose a color is hard, right?
+        Wrong! Here's what you can do:
+      </p>
+      <pre><code  class="language-html"> 
+          &lt;div class=&quot;group&quot;&gt;
+          &lt;label for=&quot;setcolor&quot; id=&quot;setcolor_lb&quot;&gt;Select color&lt;/label&gt;
+          &lt;input type=&quot;color&quot; id=&quot;setcolor&quot;&gt;   
+          &lt;/div&gt;
+        </code></pre>
+      <pre><code  class="language-javascript">
+          let cl_label= document.getElementById("setcolor_lb");
+          setInterval(() => {cl_label.style.color = document.getElementById("setcolor").value}, 1) 
+          </code></pre>
+      <div class="group">
+        <label for="setcolor" id="setcolor_lb">Select color</label>
+        <input type="color" id="setcolor" />
+      </div>
+      <p class="blog_part">
+        I think this is very useful! And of course, you can edit the input! I've
+        used it on my websites as well.
+      </p>
       <p class="blog_part">Finally, last but not least:</p>
       <p class="blog_h">Input recommendations</p>
-      <p class="blog_part">This thing is actually  implemented in most of the browsers. Well, sort of. It looks at the type of your input and recommends the data you've typed before. But you can make it recommend whatever you want. Take a look at this: </p>
-      <input list="subjects">
+      <p class="blog_part">
+        This thing is actually implemented in most of the browsers. Well, sort
+        of. It looks at the type of your input and recommends the data you've
+        typed before. But you can make it recommend whatever you want. Take a
+        look at this:
+      </p>
+      <pre><code  class="language-html"> 
+        &lt;input list=&quot;subjects&quot;&gt;
+        &lt;datalist id=&quot;subjects&quot;&gt;
+        &lt;option&gt;Bulbasaur&lt;/option&gt;
+        &lt;option&gt;Squirtle&lt;/option&gt;
+        &lt;option&gt;Charmander&lt;/option&gt;
+        &lt;option&gt;Pikachu&lt;/option&gt;
+        &lt;/datalist&gt;
+      </code></pre>
+      <input list="subjects" />
       <datalist id="subjects">
-        <option >Bulbasaur</option>
-        <option >Squirtle</option>
-        <option >Charmander</option>
-        <option >Pikachu</option>
+        <option>Bulbasaur</option>
+        <option>Squirtle</option>
+        <option>Charmander</option>
+        <option>Pikachu</option>
       </datalist>
-      <p class="blog_part">Implementing it in a form is nice. In a searchbar is better. </p>
-      <p class="blog_part">That's basically it... I sure do know more cool things about HTML, but listing them all would take too much time. I hope this blog helps someone!</p>
+      <p class="blog_part">
+        Implementing it in a form is nice. In a searchbar is better.
+      </p>
+      <p class="blog_part">
+        That's basically it... I sure do know more cool things about HTML, but
+        listing them all would take too much time. I hope this blog helps
+        someone!
+      </p>
       <p class="blog_part">06.12.23</p>
     </main>
     <footer class="footer">
-      <div class="foot_nav">
-      <div class="head_logo">
-        <span>ALEXOS</span>
-        <img src="./content/Logo_placeholder.png" alt="" />
+      <div class="foot_first">
+        <div class="head_logo">
+          <span>ALEXOS</span>
+          <img src="./content/Logo_placeholder.png" alt="" />
+        </div>
+        <nav class="foot_nav">
+          <a href="" class="link">Main</a>
+          <a href="" class="link">About me</a>
+          <a href="" class="link">Blogs</a>
+
+          <a href="" class="link">Contacts</a>
+        </nav>
       </div>
-      <nav class="nav">
-        <a href="" class="link">Main</a>
-        <a href="" class="link">About me</a>
-        <a href="" class="link">Blogs</a>
-  
-        <a href="" class="link">Contacts</a>
-      </nav>
-    </div>
-    <div class="foot_lc">
-      <p>Last update: 06.12.23</p> <p>&copy;2023. All rights reserved.</p>
-    </div>
+      <div class="foot_lc">
+        <p>Last update: 10.12.23</p>
+        <p>&copy;2023. All rights reserved.</p>
+      </div>
     </footer>
   </body>
- 
 
   <script src="../../../jquery-3.6.0.min.js"></script>
+
   <script src="./script.js"></script>
   <script>
-   
-     
-      function disappear() {
-         let button = document.getElementById("dsp_btn");
-          button.style.display = "none";
-};
+    function disappear() {
+      let button = document.getElementById("dsp_btn");
+      button.style.display = "none";
+    }
 
-document.getElementById("pika").addEventListener("click", function() {alr("Pika")}, false);
-document.getElementById("boo").addEventListener("click", function() {alr("Boo")}, false);
-document.getElementById("pikaboo").addEventListener("click", function() {alr("Pikaboo")}, false);
-function alr(text, event) {
-
-  text += "!";
-  alert(text);
- };
-let cl_label= document.getElementById("setcolor_lb");
-setInterval(() => {cl_label.style.color = document.getElementById("setcolor").value}, 1) 
+    document.getElementById("pika").addEventListener(
+      "click",
+      function () {
+        alr("Pika");
+      },
+      false
+    );
+    document.getElementById("boo").addEventListener(
+      "click",
+      function () {
+        alr("Boo");
+      },
+      false
+    );
+    document.getElementById("pikaboo").addEventListener(
+      "click",
+      function () {
+        alr("Pikaboo");
+      },
+      false
+    );
+    function alr(text, event) {
+      text += "!";
+      alert(text);
+    }
+    let cl_label = document.getElementById("setcolor_lb");
+    setInterval(() => {
+      cl_label.style.color = document.getElementById("setcolor").value;
+    }, 1);
   </script>
 </html>

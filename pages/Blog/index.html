@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main_styles.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://kit.fontawesome.com/afb6fc4174.js" crossorigin="anonymous"></script>
     <title>ALEXOS</title>
   </head>
   <body>
@@ -12,14 +14,18 @@
         <span>ALEXOS</span>
         <img src="./content/Logo_placeholder.png" alt="" />
       </div>
-      <nav class="nav">
+      <nav class="main_nav">
         <a href="" class="link">Main</a>
         <a href="" class="link">About me</a>
         <a href="" class="link">Blogs</a>
 
         <a href="" class="link">Contacts</a>
+        <div class="head_logo nav_logo">
+          <span>ALEXOS</span>
+          <img src="./content/Logo_placeholder.png" alt="" />
+        </div>
       </nav>
-      <div class="hamburger_menu">
+      <div class="hamburger_menu" onclick="open_nav()">
         <div class="bar"></div>
       </div>
     </header>
@@ -53,12 +59,7 @@
       </div>
       <div id="fav_pages">
         <div id="favp__sec1" class="favp__sec">
-          <article class="fav_page">
-            <a href="">
-            <img src="./content/fav_blog_1.png" alt="" />
-            <h4 class="comment">// HTML tips no </br>// one uses</h4>
-          </a>
-          </article>
+          
           <article class="fav_page">
             <a href="">
               <img src="./content/fav_blog_1.png" alt="" />
@@ -85,12 +86,7 @@
               <h4 class="comment">// HTML tips no </br>// one uses</h4>
             </a>
           </article>
-          <article class="fav_page">
-            <a href="">
-              <img src="./content/fav_blog_1.png" alt="" />
-              <h4 class="comment">// HTML tips no </br>// one uses</h4>
-            </a>
-          </article>
+          
         </div>
       </div>
     </div>
@@ -112,12 +108,12 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="foot_nav">
+    <div class="foot_first">
     <div class="head_logo">
       <span>ALEXOS</span>
       <img src="./content/Logo_placeholder.png" alt="" />
     </div>
-    <nav class="nav">
+    <nav class="foot_nav">
       <a href="" class="link">Main</a>
       <a href="" class="link">About me</a>
       <a href="" class="link">Blogs</a>
@@ -126,10 +122,10 @@
     </nav>
   </div>
   <div class="foot_lc">
-    <p>Last update: 06.12.23</p> <p>&copy;2023. All rights reserved.</p>
+    <p>Last update: 10.12.23</p> <p>&copy;2023. All rights reserved.</p>
   </div>
   </footer>
   </body>
   <script src="../../jquery-3.6.0.min.js"></script>
-  <script src="./index.js"></script>
+  <script src="./main.js"></script>
 </html>
