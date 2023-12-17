@@ -54,6 +54,8 @@
   --bracket: #ffd700;
   --bracket_alt: #da70d6;
   --word_sign: #898986;
+  --html_obj: #39bae6;
+  --html_brack: #145c7d;
 }
 
 pre code {
@@ -248,6 +250,10 @@ summary {
   line-height: 10rem;
 }
 
+.blog_pic {
+  max-width: 70%;
+}
+
 .btn {
   display: flex;
   text-align: center;
@@ -264,7 +270,9 @@ summary {
 
 .group {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .func {
