@@ -88,6 +88,10 @@ ul {
 summary {
   font-size: 1.5rem;
 }
+label {
+  top: 0;
+  color: var(--tag);
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -172,6 +176,7 @@ header {
 
 nav {
   display: flex;
+  align-items: center;
   flex-flow: row wrap;
   margin-left: auto;
   column-gap: 7.5rem;
@@ -194,7 +199,7 @@ nav .head_logo {
   font-weight: 200;
 }
 .head_logo img {
-  max-width: 7rem;
+  max-width: 4rem;
 }
 .nav_logo {
   margin: 0;
@@ -213,7 +218,24 @@ nav .head_logo {
   text-decoration: none;
   animation: blinklink 2s linear 0.15s infinite;
 }
-
+#select_hold {
+  display: flex;
+  flex-direction: column;
+}
+#select_from {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  background-color: transparent;
+  font-family: "Fira Code", monospace;
+  font-size: 1.5rem;
+  color: var(--basic_text);
+}
+#select_from::after {
+  content: ".title";
+  color: var(--func);
+  font-size: 1rem;
+}
 .open_nav {
   right: 0 !important;
 }

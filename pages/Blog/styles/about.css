@@ -1,0 +1,57 @@
+#greeting_text {
+  align-self: center;
+  text-align: center;
+  max-width: 43rem;
+  font-size: 1.2rem;
+}
+#greeting_text::after {
+  content: " ";
+  background-color: var(--basic_text);
+}
+.ability_cards {
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  gap: 3rem;
+  align-items: center;
+}
+.ability_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ability_card h4 {
+  font-size: 2rem;
+}
+.offer_list_ul {
+  display: flex;
+  flex-direction: column;
+  list-style: square;
+  margin-left: 2rem;
+}
+.offer_list_ul li {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+.offer_list_ul li::marker {
+  color: var(--markup);
+}
+#resumelink_sec .container {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#resumelink_sec .container p {
+  font-weight: 500;
+  font-size: 2rem;
+  max-width: 50rem;
+}
+@media (max-width: 850px) {
+  #resumelink_sec .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  #resumelink_sec .container p {
+    margin-bottom: 2rem;
+  }
+}
