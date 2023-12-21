@@ -38,6 +38,7 @@
   --word_sign: #f8f8f2;
   --html_obj: #ff79c6;
   --html_brack: #f8f8f2;
+  --keyword: #ff79c6;
 }
 
 [data-theme=ayu] {
@@ -47,7 +48,7 @@
   --comment: #454b55;
   --string: #aad94c;
   --state: #d2a6ff;
-  --operator: #d5793a;
+  --operator: #f29668;
   --tag: #329cc2;
   --markup: #c96068;
   --func: #ffb454;
@@ -56,6 +57,7 @@
   --word_sign: #898986;
   --html_obj: #39bae6;
   --html_brack: #145c7d;
+  --keyword: #ff8f40;
 }
 
 pre code {
@@ -96,7 +98,7 @@ pre code *::selection,
 }
 
 .hljs-keyword {
-  color: var(--bracket) !important;
+  color: var(--keyword) !important;
 }
 
 .hljs-function > .hljs-keyword {

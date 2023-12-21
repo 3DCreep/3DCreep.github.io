@@ -3,22 +3,17 @@ function open_nav() {
   $(".nav_logo").toggleClass("open_navlogo");
   $(".bar").toggleClass("active_bar");
 }
-
-document.getElementById("email_link").addEventListener("click", function () {
-  // Get the text you want to copy
-  let text = "AlexST_frwrk@proton.me";
-
-  // Use the Clipboard API to write the text to the clipboard
-  navigator.clipboard
-    .writeText(text)
-    .then(function () {
-      console.log("Copied!");
-    })
-    .catch(function (err) {
-      console.error("Sorry, an error occured while copying", err);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  let opt_list = document.getElementsByClassName("theme_opt");
+  console.log(opt_list, "< = list of options");
+  for (let el of opt_list) {
+    if (el.value == getCookie("data-theme")) {
+      el.setAttribute("selected", "selected");
+    }
+  }
 });
 let code = document.querySelector("html");
+console.log(getCookie("data-theme"));
 code.setAttribute("data-theme", getCookie("data-theme"));
 function createCookie(name, val, expTime) {
   const date = new Date();
@@ -45,4 +40,10 @@ function getCookie(name) {
 }
 function deleteCookie(name) {
   createCookie(name, null, null);
+}
+function UpdateCok() {
+  let select = document.getElementById("select_from");
+  let total_val = select.value;
+  createCookie("data-theme", total_val, 20);
+  document.querySelector("html").setAttribute("data-theme", total_val);
 }

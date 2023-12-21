@@ -15,6 +15,7 @@
   --word_sign: #f8f8f2;
   --html_obj: #ff79c6;
   --html_brack: #f8f8f2;
+  --keyword: #ff79c6;
 }
 
 [data-theme="ayu"] {
@@ -24,15 +25,72 @@
   --comment: #454b55;
   --string: #aad94c;
   --state: #d2a6ff;
-  --operator: #d5793a;
+  --operator: #f29668;
+  --keyword: #ff8f40;
   --tag: #329cc2;
   --markup: #c96068;
   --func: #ffb454;
   --bracket: #ffd700;
   --bracket_alt: #da70d6;
   --word_sign: #898986;
+  --html_obj: #39bae6;
+  --html_brack: #145c7d;
+}
+[data-theme="monokai"] {
+  --bg: #272822;
+  --dark_bg: #1d1e19;
+  --basic_text: #fdfff1;
+  --comment: #6e7066;
+  --string: #e6db74;
+  --state: #ae81ff;
+  --operator: #f92672;
+  --keyword: #66d9ef;
+  --tag: #66d9ef;
+  --markup: #a6e22e;
+  --func: #a6e22e;
+  --bracket: #f92672;
+  --bracket_alt: #fd971f;
+  --word_sign: #919288;
+  --html_obj: #f92672;
+  --html_brack: #919288;
+}
+[data-theme="dark_lime_flat"] {
+  --bg: #202226;
+  --dark_bg: #131416;
+  --basic_text: #ffffff;
+  --comment: #abb2bf;
+  --string: #98c379;
+  --state: #ff5370;
+  --operator: #ff5370;
+  --keyword: #ff5370;
+  --tag: #f69d50;
+  --markup: #82aaff;
+  --func: #82aaff;
+  --bracket: #ffc919;
+  --bracket_alt: #c792ea;
+  --word_sign: #ffffff;
+  --html_obj: #f07178;
+  --html_brack: #ffffff;
 }
 
+[data-theme="vs_dark"] {
+  --bg: #1e1e1e;
+  --dark_bg: #252526;
+  --basic_text: #d4d4d4;
+  --comment: #6a9955;
+  --string: #ce9178;
+  --state: #b5cea8;
+  --operator: #d4d4d4;
+  --keyword: #569cd6;
+  --tag: #d4d4d4;
+  --markup: #d4d4d4;
+  --func: #d4d4d4;
+  --bracket: #f1d710;
+  --bracket_alt: #da63a1;
+  --word_sign: #d4d4d4;
+  --html_obj: #569cd6;
+  --html_brack: #808080;
+}
 *,
 *::after,
 *::before {
@@ -70,9 +128,10 @@ a {
 }
 a:hover {
   text-decoration: underline;
+  text-decoration-color: currentColor;
 }
 i {
-  color: var(--background);
+  color: var(--basic_text);
 }
 
 button {
@@ -92,6 +151,7 @@ label {
   top: 0;
   color: var(--tag);
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -217,6 +277,9 @@ nav .head_logo {
 .link:hover {
   text-decoration: none;
   animation: blinklink 2s linear 0.15s infinite;
+}
+optgroup {
+  background-color: var(--bg) !important;
 }
 #select_hold {
   display: flex;

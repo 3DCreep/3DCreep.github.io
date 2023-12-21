@@ -15,19 +15,21 @@
         <img src="./content/Logo.gif" alt="" />
       </div>
       <nav class="main_nav">
-        <a href="" class="link">Main</a>
-        <a href="" class="link">About me</a>
-        <a href="" class="link">Blogs</a>
+        <a href="./index.html" class="link">Main</a>
+        <a href="./about.html" class="link">About me</a>
+        <a href="./blogs.html" class="link">Blogs</a>
 
-        <a href="" class="link">Contacts</a>
+        <a href="./contacts.html" class="link">Contacts</a>
         <div id="select_hold">
         <label for="select_from" >Choose theme:</label>
-        <select name="select" id="select_from">
-          <option value="opt1">Выбор1</option>
-          <option value="opt2">Выбор2</option>
-          <option value="opt3">Выбор3</option>
-          <option value="opt4">Выбор4</option>
-          <option selected value="opt5">Изначальный выбор</option>
+        <select name="select" id="select_from" onchange="UpdateCok()">
+          <optgroup>
+          <option class="theme_opt" value="monokai">Monokai</option>
+          <option class="theme_opt" value="dark_lime_flat">Dark Lime Flat</option>
+          <option class="theme_opt" value="vs_dark">VS Dark </option>
+          <option class="theme_opt" value="dracula">Dracula</option>
+          <option class="theme_opt" value="ayu" >Ayu</option>
+        </optgroup>
         </select>
       </div>
         <div class="head_logo nav_logo">
@@ -121,14 +123,14 @@
     <div class="foot_first">
     <div class="head_logo">
       <span>ALEXOS</span>
-      <img src="./content/Logo_placeholder.png" alt="" />
+      <img src="./content/Logo.gif" alt="" />
     </div>
     <nav class="foot_nav">
-      <a href="" class="link">Main</a>
-      <a href="" class="link">About me</a>
-      <a href="" class="link">Blogs</a>
+      <a href="./index.html" class="link">Main</a>
+      <a href="./about.html" class="link">About me</a>
+      <a href="./blogs.html" class="link">Blogs</a>
 
-      <a href="" class="link">Contacts</a>
+      <a href="./contacts.html" class="link">Contacts</a>
     </nav>
   </div>
   <div class="foot_lc">

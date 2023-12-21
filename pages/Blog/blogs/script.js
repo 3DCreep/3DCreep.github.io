@@ -19,10 +19,7 @@ function open_nav() {
 
 code.setAttribute("data-theme", getCookie("data-theme"));
 // $("html").attr("data-theme") = getCookie();
-$("#cookie-button").on("click", () => {
-  createCookie("data-theme", "ayu", 20);
-  console.log(getCookie("data-theme"), "< = The cookie click");
-});
+
 console.log(getCookie("data-theme"));
 function createCookie(name, val, expTime) {
   const date = new Date();
