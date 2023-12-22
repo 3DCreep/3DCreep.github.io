@@ -229,7 +229,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 10rem;
+  min-height: 10rem;
   padding: 3rem 8rem;
   color: var(--basic_text);
 }
@@ -351,7 +351,14 @@ footer {
   justify-content: space-evenly;
   align-items: center;
 }
-
+.screen_warn {
+  height: 85vh;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 @keyframes blinklink {
   0% {
     color: var(--bg);

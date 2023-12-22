@@ -46,3 +46,11 @@ $("footer").html(`<footer class="footer">
 <p>Last update: 10.12.23</p> <p>&copy;2023. All rights reserved.</p>
 </div>
 </footer>`);
+if (screen.width < 400) {
+  $("header").after(` <div class="screen_warn">
+  <h2>
+    Warning! This website is not recommended to be visited on small screens.
+    Be prepared for unreadability and bugs.
+  </h2>
+</div>`);
+}

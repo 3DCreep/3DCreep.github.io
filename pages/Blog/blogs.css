@@ -1,0 +1,33 @@
+.page_top {
+  border-bottom: solid var(--basic_text) 1rem;
+  min-height: 10rem;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 4rem;
+}
+.page_top h1 {
+  font-size: 4.5rem;
+}
+.blog_link {
+  display: flex;
+  flex-direction: column;
+}
+.blog_link a {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.blog_link p {
+  font-size: 1.2rem;
+}
+
+.blog_link::before {
+  content: attr(post_time);
+  color: var(--comment);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.blogs_list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}

@@ -207,15 +207,6 @@ summary {
   font-weight: 700;
 }
 
-.screen_warn {
-  height: 85vh;
-  display: flex;
-  padding: 2rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -380,11 +371,6 @@ summary {
   }
   .blog_name {
     padding: 0 0 2rem 5rem;
-  }
-}
-@media (min-width: 500px) {
-  .screen_warn {
-    display: none;
   }
 }
 
