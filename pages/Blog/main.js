@@ -3,6 +3,9 @@ function open_nav() {
   $(".nav_logo").toggleClass("open_navlogo");
   $(".bar").toggleClass("active_bar");
 }
+if (getCookie("data-theme") == undefined) {
+  createCookie("data-theme", "dracula", 20);
+}
 document.addEventListener("DOMContentLoaded", () => {
   let opt_list = document.getElementsByClassName("theme_opt");
   console.log(opt_list, "< = list of options");
