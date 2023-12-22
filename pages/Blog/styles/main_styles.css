@@ -112,7 +112,7 @@ section,
 header {
   position: relative;
   display: flex;
-  padding: 2rem 12rem;
+  padding: 8rem 12rem;
   margin-bottom: 14rem;
 }
 
@@ -230,7 +230,7 @@ header {
   flex-direction: row;
   align-items: center;
   height: 10rem;
-  padding: 2rem 8rem;
+  padding: 3rem 8rem;
   color: var(--basic_text);
 }
 
@@ -466,6 +466,9 @@ footer {
   }
   .bar::after {
     transform: translateY(0.8rem);
+  }
+  main {
+    margin-top: 10rem;
   }
 }
 @media (max-width: 600px) {

@@ -1,3 +1,4 @@
+hljs.highlightAll();
 function open_nav() {
   $(".main_nav").toggleClass("open_nav");
   $(".nav_logo").toggleClass("open_navlogo");

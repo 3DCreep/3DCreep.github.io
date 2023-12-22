@@ -22,7 +22,7 @@
     --bracket_alt: ;
     --sign: ;
   } */
-[data-theme=dracula] {
+[data-theme="dracula"] {
   --bg: #282a36;
   --dark_bg: #21222c;
   --basic_text: #f8f8f2;
@@ -41,7 +41,7 @@
   --keyword: #ff79c6;
 }
 
-[data-theme=ayu] {
+[data-theme="ayu"] {
   --bg: #0b0e14;
   --dark_bg: rgb(21, 22, 34);
   --basic_text: #bfbdb6;
@@ -154,7 +154,8 @@ main,
 header {
   position: relative;
   display: flex;
-  padding: 2rem 12rem;
+  padding: 8rem 12rem;
+
   margin-bottom: 14rem;
 }
 
@@ -347,12 +348,18 @@ summary {
   html {
     font-size: 13px;
   }
+  .bar,
+  .bar::before,
+  .bar::after {
+    top: 6.5rem;
+  }
   .blog {
     width: 100%;
   }
   main,
   header {
     padding: 2rem 8rem;
+    padding-top: 5rem !important;
     margin-bottom: 9rem;
   }
   .blog_name {

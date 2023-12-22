@@ -1,13 +1,13 @@
 $("header").html(`<div class="head_logo">
 <span>ALEXOS</span>
-<img src="./content/Logo.gif" alt="" />
+<img src="../content/Logo.gif" alt="" />
 </div>
 <nav class="main_nav">
-<a href="./index.html" class="link">Main</a>
-<a href="./about.html" class="link">About me</a>
-<a href="./blogs.html" class="link">Blogs</a>
+<a href="../index.html" class="link">Main</a>
+<a href="../about.html" class="link">About me</a>
+<a href="../blogs.html" class="link">Blogs</a>
 
-<a href="./contacts.html" class="link">Contacts</a>
+<a href="../contacts.html" class="link">Contacts</a>
 <div id="select_hold">
 <label for="select_from" >Choose theme:</label>
 <select name="select" id="select_from" onchange="UpdateCok()">
@@ -22,7 +22,7 @@ $("header").html(`<div class="head_logo">
 </div>
 <div class="head_logo nav_logo">
   <span>ALEXOS</span>
-  <img src="./content/Logo_placeholder.png" alt="" />
+  <img src="../content/Logo.gif" alt="" />
 </div>
 </nav>
 <div class="hamburger_menu" onclick="open_nav()">
@@ -32,14 +32,14 @@ $("footer").html(`<footer class="footer">
 <div class="foot_first">
 <div class="head_logo">
   <span>ALEXOS</span>
-  <img src="./content/Logo.gif" alt="" />
+  <img src="../content/Logo.gif" alt="" />
 </div>
 <nav class="foot_nav">
-  <a href="./index.html" class="link">Main</a>
-  <a href="./about.html" class="link">About me</a>
-  <a href="./blogs.html" class="link">Blogs</a>
+  <a href="../index.html" class="link">Main</a>
+  <a href="../about.html" class="link">About me</a>
+  <a href="../blogs.html" class="link">Blogs</a>
 
-  <a href="./contacts.html" class="link">Contacts</a>
+  <a href="../contacts.html" class="link">Contacts</a>
 </nav>
 </div>
 <div class="foot_lc">
